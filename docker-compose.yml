@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  eureka-server:
+    image: eureka #nombre de la imagen que hemos creado
+    restart: always
+    container_name: eureka
+    ports:
+      - '8082:8082'
+    networks:
+      - 'dockerdiscovery-network'
+
+networks:
+  dockerdiscovery-network: #necesitamos crear en una red para alojar los servicios en ella y que puedan comunicarse entre sí
+ 

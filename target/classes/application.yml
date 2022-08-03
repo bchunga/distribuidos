@@ -1,0 +1,18 @@
+
+spring:
+  application:
+    name: discovery
+ 
+#Tomcat Embedded Server Configuration
+server: 
+  port: 8082
+ 
+#Eureka Configuration Properties
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    serviceURL:
+      defaultZone: http://localhost:8082/eureka/
+    registerWithEureka: false
+    fetchRegistry: false
